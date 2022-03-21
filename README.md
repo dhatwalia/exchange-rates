@@ -8,10 +8,14 @@ Note: All currencies are converted to INR. Supported currencies:
 
 In the project directory, you can run:
 
+`./run.sh`
+
+This will run all the programs in the repository.
+
 `python update.py`
 
-This will fetch and update the rates.csv file
+This will only fetch and update the rates.csv file
 
 `python predict.py`
 
-This will perform machine learning and predict the exchange rates using rates.csv file
+This will only perform machine learning and predict the exchange rates using rates.csv file
