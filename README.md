@@ -8,7 +8,7 @@ Note: All currencies are converted to INR. Supported currencies:
 
 In the project directory, you can run:
 
-`python rates.py`
+`python update.py`
 
 This will fetch and update the rates.csv file
 
