@@ -28,7 +28,7 @@ def forecast_rate(currency, days):
 
 
 # Initial variables
-days = 100
+days = 10
 
 # Plot the forecast results
 plt.figure(figsize=(10, 4))
