@@ -1,4 +1,5 @@
 # Predicts the exchange rates
+from tabnanny import verbose
 from pandas import *
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -17,7 +18,7 @@ data['date'] = to_datetime(data['date'])
 def forecast_rate(currency, days):
     # Build the model
     model = AutoTS(forecast_length=days, frequency='infer',
-                   ensemble='simple', model_list='superfast')
+                   ensemble='simple', model_list='superfast', verbose=0)
     model = model.fit(data, date_col='date', value_col=currency)
 
     # Predict the result
