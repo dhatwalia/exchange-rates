@@ -36,6 +36,13 @@ gbp_inr = round(gbp_cad * cad_inr, 2)
 # Round CAD to INR
 cad_inr = round(cad_inr, 2)
 
+print('************************ Statistics ************************\n')
+print('Today\'s exchange rate \t\t= $', max(cad_inr[-1:]))
+print('Highest of the last 10 days \t= $', max(cad_inr[-10:]))
+print('Highest of the last 1 month \t= $', max(cad_inr[-30:]))
+print('Highest of the last 1 year \t= $', max(cad_inr[-365:]))
+print('\n************************************************************\n')
+
 # Step 3: Merge the data
 merged = concat([dates, cad_inr, usd_inr, eur_inr, gbp_inr], axis=1)
 merged.columns = ['date', 'CAD', 'USD', 'EUR', 'GBP']
