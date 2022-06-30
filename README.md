@@ -8,9 +8,15 @@ Note: All currencies are converted to INR. Supported currencies:
 
 In the project directory, you can run:
 
+Mac OS/Linux:
+
 `./run.sh`
 
-This will run all the programs in the repository.
+Windows:
+
+`.\run.bat`
+
+These will run all the programs in the repository.
 
 `python update.py`
 
