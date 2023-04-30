@@ -1,6 +1,6 @@
 # Run the python update and predict commands
-python update.py
-python predict.py
+python3 update.py
+python3 predict.py
 
 # Read the count from file
 count=$(head -n 1 'counter.txt')

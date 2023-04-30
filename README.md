@@ -16,12 +16,12 @@ Windows:
 
 `.\run.bat`
 
-These will run all the programs in the repository.
+These will predict the value of currencies with reference to INR.
 
-`python update.py`
+`python3 predict.py`
 
 This will only fetch and update the rates.csv file
 
-`python predict.py`
+`python3 update.py`
 
 This will only perform machine learning and predict the exchange rates using rates.csv file
