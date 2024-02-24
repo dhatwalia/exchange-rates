@@ -41,6 +41,7 @@ print('Today\'s exchange rate \t\t= $', max(cad_inr[-1:]))
 print('Highest of the last 10 days \t= $', max(cad_inr[-10:]))
 print('Highest of the last 1 month \t= $', max(cad_inr[-30:]))
 print('Highest of the last 1 year \t= $', max(cad_inr[-365:]))
+print('Highest of the last 5 year \t= $', max(cad_inr[-365*5:]))
 print('\n************************************************************\n')
 
 # Step 3: Merge the data
