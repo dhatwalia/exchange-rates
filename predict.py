@@ -22,7 +22,8 @@ def forecast_rate(currency, days=10):
     next_days = [datetime.now() + timedelta(days=i) for i in range(1, days+1)]
     forecast = model.predict([[d.timestamp()] for d in next_days])
 
-    return forecast
+    # Round the result
+    return [round(x, 2) for x in forecast]
 
 # Plot the forecast results
 plt.figure(figsize=(10, 4))

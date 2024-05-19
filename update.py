@@ -7,21 +7,21 @@ vi = ValetInterpreter()
 
 # Step 1: Get all foreign exchange rates
 # CAD to INR
-_, cad_inr = vi.get_series_observations('FXCADINR')
-dates = cad_inr.loc[3:]['id']
-cad_inr = cad_inr.loc[3:]['label'].astype(float)
+cad_inr = vi.get_series_observations('FXCADINR', response_format='csv')
+dates = cad_inr.date
+cad_inr = cad_inr.FXCADINR.astype(float)
 
 # USD to CAD
-_, usd_cad = vi.get_series_observations('FXUSDCAD')
-usd_cad = usd_cad.loc[3:]['label'].astype(float)
+usd_cad = vi.get_series_observations('FXUSDCAD', response_format='csv')
+usd_cad = usd_cad.FXUSDCAD.astype(float)
 
 # EUR to CAD
-_, eur_cad = vi.get_series_observations('FXEURCAD')
-eur_cad = eur_cad.loc[3:]['label'].astype(float)
+eur_cad = vi.get_series_observations('FXEURCAD', response_format='csv')
+eur_cad = eur_cad.FXEURCAD.astype(float)
 
 # GBP to CAD
-_, gbp_cad = vi.get_series_observations('FXGBPCAD')
-gbp_cad = gbp_cad.loc[3:]['label'].astype(float)
+gbp_cad = vi.get_series_observations('FXGBPCAD', response_format='csv')
+gbp_cad = gbp_cad.FXGBPCAD.astype(float)
 
 # Step 2: Covert and round all currencies to INR
 # USD to INR
