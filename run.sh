@@ -1,6 +1,17 @@
 # Run the python update and predict commands
-python3 update.py
-python3 predict.py
+# Create python virtual environment if it doesn't exist
+if [ ! -d 'venv' ]; then
+    python -m venv venv
+    source venv/bin/activate
+    pip install -r requirements.txt
+    deactivate
+fi
+
+# Run the python update and predict scripts
+source venv/bin/activate
+python update.py
+python predict.py
+deactivate
 
 # Read the count from file
 count=$(head -n 1 'counter.txt')
