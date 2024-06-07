@@ -1,7 +1,7 @@
 # Loads the foreign exchange rates
 from datetime import datetime, timedelta
 from pandas import *
-from sklearn.linear_model import LinearRegression
+from sklearn.svm import SVR
 import matplotlib.pyplot as plt
 
 # Load the data
@@ -14,7 +14,7 @@ def forecast_rate(currency, days=10):
     currency_data = data[['date', currency]].copy()
 
     # Build the model
-    model = LinearRegression()
+    model = SVR()
     model.fit([[d.timestamp()] for d in currency_data['date']], currency_data[currency])
 
     # Predict the result
