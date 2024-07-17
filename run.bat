@@ -1,5 +1,8 @@
 @echo off
 
+@REM Pull changes that could be made on other machines
+git pull
+
 @REM Run the python update and predict commands
 @REM Create python virtual environment if it does not exist
 if not exist "venv" (

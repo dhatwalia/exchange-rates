@@ -1,4 +1,8 @@
 # Run the python update and predict commands
+
+# Pull changes that could be made on other machines
+git pull
+
 # Create python virtual environment if it doesn't exist
 if [ ! -d 'venv' ]; then
     python -m venv venv
