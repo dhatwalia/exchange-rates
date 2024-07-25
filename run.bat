@@ -22,7 +22,7 @@ deactivate
 set /p count=<counter.txt
 
 @REM Prepare the commit message
-set message=Update #%count%
+set message=Update #%c`ount%
 
 @REM Update the count in file
 set /a count=%count% + 1
